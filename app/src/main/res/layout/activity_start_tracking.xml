@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_app"
+    tools:context=".StartTrackingActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/background_topbar"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tracking"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"></TextView>
+
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_box_reqest"
+    android:layout_margin="10dp"
+    android:visibility="gone"
+    android:background="#185a9d">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/img_user"
+            android:src="@drawable/user_image"></com.mikhaellopez.circularimageview.CircularImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rohit"
+                android:id="@+id/txt_name"
+                android:textColor="@color/white"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9815187258"
+                android:id="@+id/txt_number"
+                android:textColor="@color/white"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:paddingVertical="10dp"
+        android:id="@+id/btn_cancel_request"
+        android:paddingHorizontal="20dp"
+        android:layout_marginRight="10dp"
+        android:text="Cancel Request "
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:background="@drawable/background_button_white_edges"></androidx.appcompat.widget.AppCompatButton>
+</RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:id="@+id/ll_box_request_reject"
+    android:orientation="vertical"
+    android:background="#185a9d"
+    android:visibility="gone">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/img_user_reject"
+            android:src="@drawable/user_image"></com.mikhaellopez.circularimageview.CircularImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rohit"
+                android:id="@+id/txt_name_reject"
+                android:textColor="@color/white"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+9815187258"
+                android:id="@+id/txt_number_reject"
+                android:textColor="@color/white"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="has rejected your request."
+                android:textColor="@color/white"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+
+        android:layout_marginLeft="50dp"
+        android:paddingHorizontal="20dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:id="@+id/btn_ok"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_button_white_edges"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="Ok"
+            android:layout_marginTop="5dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"></androidx.appcompat.widget.AppCompatButton>
+
+     </LinearLayout>
+
+</LinearLayout>
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/rl_box_followed"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:background="#185a9d">-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:padding="20dp">-->
+<!--            <com.mikhaellopez.circularimageview.CircularImageView-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:id="@+id/img_user_folllowed"-->
+<!--                android:src="@drawable/user_image"></com.mikhaellopez.circularimageview.CircularImageView>-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:orientation="vertical">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Rohit"-->
+<!--                    android:id="@+id/txt_name"-->
+<!--                    android:textColor="@color/white"></TextView>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="9815187258"-->
+<!--                    android:id="@+id/txt_number"-->
+<!--                    android:textColor="@color/white"></TextView>-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:paddingVertical="10dp"-->
+<!--            android:id="@+id/btn_request"-->
+<!--            android:paddingHorizontal="20dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:text="Cancel Request "-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:background="@drawable/background_button_white_edges"></androidx.appcompat.widget.AppCompatButton>-->
+<!--    </RelativeLayout>-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:id="@+id/recyclerView_trackerlist"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/list_trackers_request"></androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

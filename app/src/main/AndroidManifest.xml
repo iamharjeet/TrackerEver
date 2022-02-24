@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.harjeet.trackerever">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_location"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_location"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/Theme.TrackerEver">
+
+        <service
+            android:name="com.harjeet.trackerever.Firebase.MyFirebaseInstanceIDService" android:exported="true" android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.harjeet.trackerever.Firebase.MyFireBaseMessagingService" android:exported="true" android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.harjeet.trackerever.MyBackgroundService.ForegroundService"
+            android:enabled="true"
+            android:foregroundServiceType="location"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+
+        <service
+            android:name="com.harjeet.trackerever.MyBackgroundService.SharingLocationService"
+            android:enabled="true"
+            android:foregroundServiceType="location"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+
+        <activity android:name="com.harjeet.trackerever.NotificationsActivity"/>
+        <activity android:name="com.harjeet.trackerever.TrackersActivity" />
+        <activity android:name="com.harjeet.trackerever.RegisterationActivity" />
+        <activity android:name="com.harjeet.trackerever.OTPverifyActivity" />
+        <activity android:name="com.harjeet.trackerever.SettingsActivity" />
+        <activity android:name="com.harjeet.trackerever.ProfileActivity" />
+        <activity android:name="com.harjeet.trackerever.RequestsActivity" />
+        <activity android:name="com.harjeet.trackerever.StartTrackingActivity" />
+        <activity android:name="com.harjeet.trackerever.TrackingActivity" />
+        <activity android:name="com.harjeet.trackerever.HomeActivity" />
+        <activity android:name="com.harjeet.trackerever.PhoneVerificationActivity" />
+        <activity android:name="com.harjeet.trackerever.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
